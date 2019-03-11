@@ -1,0 +1,8 @@
+/vendor
+/.idea
+nbproject
+Homestead.json
+Homestead.yaml
+.env
+node_modules
+public/dist
