@@ -12,14 +12,13 @@
 */
 
 $router->group([
+    'middleware' => 'auth ',
     'prefix' => 'api',
-    'middleware' => 'auth',
 ], function () use ($router) {
-    $router->post('login', 'AuthController@login');
+
     $router->post('logout', 'AuthController@logout');
     $router->post('refresh', 'AuthController@refresh');
     $router->post('me', 'AuthController@me');
-
 
 //    $router->get('/posts', 'PostController@index');
 //    $router->get('/post/{id}', 'PostController@show');
@@ -28,6 +27,8 @@ $router->group([
 //    $router->post('/post', 'PostController@create');
 //    $router->post('/post/{id}/comments', 'CommentsController@store');
 });
+
+$router->post('login', 'AuthController@login');
 
 $router->get('/{route:.*}/', function ()  {
     return view('app');
