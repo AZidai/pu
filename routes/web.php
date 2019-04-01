@@ -28,7 +28,7 @@ $router->group([
 //    $router->post('/post/{id}/comments', 'CommentsController@store');
 });
 
-$router->post('login', 'AuthController@login');
+$router->post('auth/login', 'AuthController@login');
 
 $router->get('/{route:.*}/', function ()  {
     return view('app');

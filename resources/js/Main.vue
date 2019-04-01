@@ -1,6 +1,7 @@
 <template>
     <div>
-        Home Page vue comp NEW
+         MAIN Component
+        <router-view></router-view>
     </div>
 </template>
 
