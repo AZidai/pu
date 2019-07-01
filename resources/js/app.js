@@ -1,18 +1,14 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import Home from './Home'
-
-Vue.use(VueRouter)
-
-const router = new VueRouter({
-    mode: 'history',
-    base: '/',
-    routes: [
-        {path: '/', component: Home},
-        {path: '/home', component: Home}
-    ]
-})
+import store, { initializeState } from './store.js'
+import router from './routes.js'
+import Main from './Main'
 
 new Vue({
-    router
+    store,
+    router,
+    mounted () {
+        initializeState()
+    },
+    components: { Main },
+    template: '<Main />'
 }).$mount('#app')

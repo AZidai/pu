@@ -8,15 +8,7 @@
         <link rel="stylesheet" href="dist/app.css" />
     </head>
     <body>
-        <div id="app">
-            <h1>PU</h1>
-
-            <p>
-                <router-link to="/home">Home</router-link>
-            </p>
-
-            <router-view></router-view>
-        </div>
+        <div id="app"></div>
         <script src="dist/app.js"></script>
     </body>
 </html>
