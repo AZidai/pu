@@ -56,7 +56,7 @@ class AuthController extends Controller
      */
     public function me()
     {
-        return $this->response(200, auth()->user());
+        return $this->response(200, $this->jwt->user());
     }
 
     /**
@@ -66,7 +66,7 @@ class AuthController extends Controller
      */
     public function logout()
     {
-        auth()->logout();
+        $this->jwt->logout();
 
         return $this->response(200, [], 'Successfully logged out');
     }
@@ -78,7 +78,7 @@ class AuthController extends Controller
      */
     public function refresh()
     {
-        return $this->response(200, $this->respondWithToken(auth()->refresh()));
+        return $this->response(200, $this->respondWithToken($this->jwt->refresh()));
     }
 
     /**

@@ -12,13 +12,13 @@
 */
 
 $router->group([
-    'middleware' => 'auth ',
+    'middleware' => 'auth',
     'prefix' => 'api',
 ], function () use ($router) {
 
-    $router->post('logout', 'AuthController@logout');
-    $router->post('refresh', 'AuthController@refresh');
-    $router->post('me', 'AuthController@me');
+    $router->post('/logout', 'AuthController@logout');
+    $router->post('/refresh', 'AuthController@refresh');
+    $router->post('/me', 'AuthController@me');
 
 //    $router->get('/posts', 'PostController@index');
 //    $router->get('/post/{id}', 'PostController@show');

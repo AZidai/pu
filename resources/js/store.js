@@ -39,10 +39,17 @@ const actions = {
             }
         })
     },
-    LOGOUT ({ commit }) {
+    LOGOUT ({ dispatch, commit }, payload) {
         commit('logout')
+        return dispatch('API', payload).then((response) => {
+            if (response.status === 200) {
+                console.log('LOGOUT =', response.data)
+                return response.data
+            }
+        })
     },
     API ({ state }, payload) {
+        console.log('API within store.js ')
         return axios({
             method: payload.method,
             url: payload.url,
