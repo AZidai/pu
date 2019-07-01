@@ -3,6 +3,22 @@ Polovni udzbenici (Used classbooks)
 
 This project is at the very beginning and my intention is to make a free public service for the highschool students to sell/buy/exchange used classbooks.
 
+## Prerequisites
+Make sure you have **Composer**, **Node.js** and **npm** installed.
+After cloning this source, you should execute these commands (in the terminal):
+
+```
+composer install
+npm install
+```
+
+If needed, run:
+
+```
+npm audit fix
+```
+
+## Usage
 In order to test this application, you should execute two shell scripts from the terminal (two tabs or separate terminal windows and keep them open):
 
 ```
